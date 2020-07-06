@@ -5,18 +5,28 @@ Created on Thu Jul  2 23:34:19 2020
 @author: ARSHPREET SINGH
 """
 
-# python scan_doc.py --image test_image.jpg
+# Run the following command in cmd (Windows) in order to execute this program.
+# Make sure to change the default directory to working directory before executing.
+# Also, make sure you have already set the virtual environment for Python.
+
+"""
+python scan_doc.py --image test_image.jpg --scanned_doc output_01.jpg
+
+"""
+
+# Using the argparse Python package, we can easily parse 
+# command line arguments in the terminal/command line.
 
 from perspectiveTransform import four_point_transform
 from skimage.filters import threshold_local
 import cv2
 import argparse
 import imutils
-import numpy as np
 
 ap= argparse.ArgumentParser()
 
 ap.add_argument("-i", "--image", help= "specify the path of image to be scanned")
+ap.add_argument("-o", "--scanned_doc", help= 'scanned document file')
 args= vars(ap.parse_args())
 
 image= cv2.imread(args["image"])
@@ -94,3 +104,8 @@ warped = (gray1 > T).astype("uint8") * 255
 cv2.imshow("Original", imutils.resize(orig, height= 650))
 cv2.imshow("Scanned Document", imutils.resize(warped, height= 650))
 cv2.waitKey(0)
+
+# show the output image in the directory
+cv2.imwrite(args["scanned_doc"], imutils.resize(warped, height = 650))
+
+# After executing, you can check your working directory for the output image "output_01.jpg"
