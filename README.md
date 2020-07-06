@@ -7,11 +7,13 @@ The application was completed in 4 easy steps :-
 3. **Step 3:** Applying _Perspective Transform_ (aka, "Bird's-Eye View") to obtain a top-down view of the document.
 4. **Step 4:** Converting to Grayscale and applying _Threshold_ to give the document a "paper-like" feel.
 </br>
+
 - The first script file, [perspectiveTransform.py](https://github.com/arshpreetsingh134/Document-Scanner-using-OpenCV/blob/master/perspectiveTransform.py) performs a 4-point perspective transform on the image.
 
 - The second script file, [scan_doc.py](https://github.com/arshpreetsingh134/Document-Scanner-using-OpenCV/blob/master/scan_doc.py) contains the core functionality.
 
-- Moreover, I have used the utility module *imutils*, which contains convenience functions for resizing, rotating, and cropping images.
+- I have also used the utility module ***imutils***, which contains convenience functions for resizing, rotating, and cropping images.
+
 
 </br>
 
