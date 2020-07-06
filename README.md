@@ -35,3 +35,5 @@ The application was completed in 4 easy steps :-
 
 ### Scanned Image :
 ![Output 1](https://github.com/arshpreetsingh134/Document-Scanner-using-OpenCV/blob/master/images/output_02.jpg)
+</br>
+Ok I don't know about you, but I find it pretty cool. B-)
